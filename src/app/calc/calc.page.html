@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Calculadora
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label position="floating">Capital</ion-label>
+    <ion-input name="capital" [(ngModel)]="calc.capital" [ngModelOptions]="{standalone: true}" inputmode="numeric"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">CDI Anual</ion-label>
+    <ion-input name="taxa" [(ngModel)]="calc.taxa" [ngModelOptions]="{standalone: true}" inputmode="numeric"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Tempo(anos)</ion-label>
+    <ion-input name="tempo" [(ngModel)]="calc.tempo" [ngModelOptions]="{standalone: true}" inputmode="numeric"></ion-input>
+  </ion-item>
+  <ion-button (click)="calculate()">Calcular</ion-button>
+  <ion-item>
+    <ion-label>{{ result | currency:"BRL" }}</ion-label>
+  </ion-item>
+</ion-content>
