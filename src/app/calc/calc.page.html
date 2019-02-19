@@ -28,7 +28,24 @@
     <ion-input name="tempo" [(ngModel)]="calc.tempo" [ngModelOptions]="{standalone: true}" inputmode="numeric"></ion-input>
   </ion-item>
   <ion-button (click)="calculate()">Calcular</ion-button>
-  <ion-item>
-    <ion-label>{{ result | currency:"BRL" }}</ion-label>
-  </ion-item>
+  <ion-item-group *ngIf="montante != null">
+    <ion-item>
+      <ion-label>
+        <h3>VALOR INVESTIDO:</h3>
+        <p>{{ investido | currency:"BRL" }}</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h3>JUROS:</h3>
+        <p>{{ juros | currency:"BRL" }}</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h3>TOTAL:</h3>
+        <p>{{ montante | currency:"BRL" }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-item-group>
 </ion-content>

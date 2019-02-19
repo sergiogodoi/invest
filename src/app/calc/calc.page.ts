@@ -13,7 +13,9 @@ export class CalcPage implements OnInit {
   }
 
   calc = {capital : null, taxa : null, tempo : null, aporte : null};
-  result = null;
+  montante = null;
+  juros = null;
+  investido = null;
 
   calculate() {
     let i = Math.round((this.calc.taxa / 12) * 100) / 100, c = this.calc.capital, t = this.calc.tempo;
@@ -21,6 +23,9 @@ export class CalcPage implements OnInit {
     let result = c * Math.pow(1+((i)/100), t);
     let mensal = this.calc.aporte * (Math.pow(1+(i/100), t) - 1) / (i/100);
 
-    this.result = result + mensal;
+    this.montante = result + mensal;
+    this.investido = this.calc.aporte * t;
+    this.investido += parseFloat(c);
+    this.juros = this.montante - this.investido;
   }
 }
