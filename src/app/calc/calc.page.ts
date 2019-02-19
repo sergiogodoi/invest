@@ -12,12 +12,15 @@ export class CalcPage implements OnInit {
   ngOnInit() {
   }
 
-  calc = {capital : null, taxa : null, tempo : null};
+  calc = {capital : null, taxa : null, tempo : null, aporte : null};
   result = null;
 
   calculate() {
-    let result = this.calc.capital * Math.pow(1+(this.calc.taxa/100), this.calc.tempo);
+    let i = Math.round((this.calc.taxa / 12) * 100) / 100, c = this.calc.capital, t = this.calc.tempo;
 
-    this.result = result;
+    let result = c * Math.pow(1+((i)/100), t);
+    let mensal = this.calc.aporte * (Math.pow(1+(i/100), t) - 1) / (i/100);
+
+    this.result = result + mensal;
   }
 }
