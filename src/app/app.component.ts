@@ -21,6 +21,11 @@ export class AppComponent {
       icon: 'list'
     },*/
     {
+      title: 'Tesouro Direto',
+      url: '/tesouro',
+      icon: 'help-circle'
+    },
+    {
       title: 'Calculadora',
       url: '/calc',
       icon: 'calculator'

@@ -19,7 +19,12 @@ const routes: Routes = [
     path: 'calc',
     loadChildren: './calc/calc.module#CalcPageModule'
   },
-  { path: 'calc', loadChildren: './calc/calc.module#CalcPageModule' }
+  {
+    path: 'tesouro',
+    loadChildren: './tesouro/tesouro.module#TesouroPageModule'
+  },
+  { path: 'calc', loadChildren: './calc/calc.module#CalcPageModule' },
+  { path: 'tesouro', loadChildren: './tesouro/tesouro.module#TesouroPageModule' }
 ];
 
 @NgModule({
