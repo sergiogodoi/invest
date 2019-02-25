@@ -13,7 +13,7 @@
 <ion-content padding>
   <ion-item>
     <ion-label position="floating">Capital</ion-label>
-    <ion-input name="capital" [(ngModel)]="calc.capital" [ngModelOptions]="{standalone: true}" inputmode="numeric"></ion-input>
+    <ion-input name="capital" (ngModelChange)="applyMask($event)" [(ngModel)]="calc.capital" [ngModelOptions]="{standalone: true}" inputmode="numeric"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Aporte Mensal</ion-label>

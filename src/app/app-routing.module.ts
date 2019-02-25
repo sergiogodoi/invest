@@ -23,8 +23,28 @@ const routes: Routes = [
     path: 'tesouro',
     loadChildren: './tesouro/tesouro.module#TesouroPageModule'
   },
+  {
+    path: 'cdb',
+    loadChildren: './cdb/cdb.module#CdbPageModule'
+  },
+  {
+    path: 'letra-credito',
+    loadChildren: './letra-credito/letra-credito.module#LetraCreditoPageModule'
+  },
+  {
+    path: 'fixa',
+    loadChildren: './fixa/fixa.module#FixaPageModule'
+  },
+  {
+    path: 'variavel',
+    loadChildren: './variavel/variavel.module#VariavelPageModule'
+  },
   { path: 'calc', loadChildren: './calc/calc.module#CalcPageModule' },
-  { path: 'tesouro', loadChildren: './tesouro/tesouro.module#TesouroPageModule' }
+  { path: 'tesouro', loadChildren: './tesouro/tesouro.module#TesouroPageModule' },
+  { path: 'cdb', loadChildren: './cdb/cdb.module#CdbPageModule' },
+  { path: 'letra-credito', loadChildren: './letra-credito/letra-credito.module#LetraCreditoPageModule' },
+  { path: 'fixa', loadChildren: './fixa/fixa.module#FixaPageModule' },
+  { path: 'variavel', loadChildren: './variavel/variavel.module#VariavelPageModule' }
 ];
 
 @NgModule({

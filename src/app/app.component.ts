@@ -21,8 +21,28 @@ export class AppComponent {
       icon: 'list'
     },*/
     {
+      title: 'Renda Fixa',
+      url: '/fixa',
+      icon: 'help-circle'
+    },
+    {
+      title: 'Renda Variável',
+      url: '/variavel',
+      icon: 'help-circle'
+    },
+    {
       title: 'Tesouro Direto',
       url: '/tesouro',
+      icon: 'help-circle'
+    },
+    {
+      title: 'CDB',
+      url: '/cdb',
+      icon: 'help-circle'
+    },
+    {
+      title: 'LCI e LCA',
+      url: '/letra-credito',
       icon: 'help-circle'
     },
     {
